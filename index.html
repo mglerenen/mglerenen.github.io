@@ -1,0 +1,1048 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7v7.7成色 - 成色之美,视频之道 | 视觉影像品牌</title>
+<meta name="description" content="7v7.7成色是专注于影像成色与视觉质感的视频品牌，用镜头记录真实成色，呈现每一个值得被看见的画面。">
+<style>
+:root{
+  --brand:#c8973f;
+  --brand-deep:#9a6f24;
+  --brand-light:#e8c887;
+  --ink:#1a1a1a;
+  --ink-soft:#3a3a3a;
+  --muted:#7a7266;
+  --paper:#faf7f1;
+  --paper-2:#f2ece0;
+  --line:#e1d8c6;
+  --dark:#12100d;
+  --dark-2:#1d1a15;
+  --white:#ffffff;
+  --shadow:0 18px 50px rgba(26,20,10,.12);
+  --shadow-lg:0 30px 80px rgba(26,20,10,.18);
+  --radius:2px;
+  --max:1200px;
+  --sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  --serif:"Songti SC","Noto Serif SC",Georgia,"Times New Roman",serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.7;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+::selection{background:var(--brand);color:#fff}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
+.serif{font-family:var(--serif)}
+.eyebrow{
+  font-size:12px;letter-spacing:.42em;text-transform:uppercase;
+  color:var(--brand);font-weight:600;margin-bottom:18px;
+}
+.section-title{
+  font-family:var(--serif);
+  font-size:clamp(30px,4vw,50px);
+  font-weight:700;line-height:1.24;
+  letter-spacing:.02em;
+  color:var(--ink);
+}
+.section-title .accent{color:var(--brand-deep)}
+.lead{font-size:17px;color:var(--muted);max-width:640px;line-height:1.9}
+
+/* ===== grain overlay ===== */
+.grain{
+  position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:.035;
+  background-image:radial-gradient(circle at 1px 1px,#000 1px,transparent 0);
+  background-size:3px 3px;mix-blend-mode:multiply;
+}
+
+/* ===== nav ===== */
+header.nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  transition:background .4s ease,box-shadow .4s ease,padding .4s ease;
+  padding:22px 0;
+}
+header.nav.scrolled{
+  background:rgba(250,247,241,.92);
+  backdrop-filter:blur(14px);
+  box-shadow:0 1px 0 var(--line),0 12px 40px rgba(26,20,10,.06);
+  padding:14px 0;
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:700;font-size:20px;letter-spacing:.04em}
+.logo-mark{
+  width:38px;height:38px;border-radius:50%;
+  background:linear-gradient(135deg,var(--brand),var(--brand-deep));
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:15px;font-weight:700;font-family:var(--sans);
+  box-shadow:0 6px 18px rgba(154,111,36,.35);
+  position:relative;
+}
+.logo-mark::after{
+  content:"";position:absolute;inset:4px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.4);
+}
+.logo-text small{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.34em;color:var(--muted);font-weight:500;margin-top:1px}
+nav.links{display:flex;gap:38px;align-items:center}
+nav.links a{font-size:14px;letter-spacing:.06em;color:var(--ink-soft);position:relative;padding:4px 0;transition:color .3s}
+nav.links a::after{
+  content:"";position:absolute;left:0;bottom:-2px;width:0;height:1px;
+  background:var(--brand);transition:width .35s ease;
+}
+nav.links a:hover{color:var(--brand-deep)}
+nav.links a:hover::after{width:100%}
+.nav-cta{
+  padding:10px 24px;border:1px solid var(--ink);border-radius:100px;
+  font-size:13px;letter-spacing:.08em;transition:all .35s ease;white-space:nowrap;
+}
+.nav-cta:hover{background:var(--ink);color:var(--paper)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+.burger span{width:24px;height:1.5px;background:var(--ink);transition:.3s}
+
+/* ===== hero ===== */
+.hero{
+  position:relative;min-height:100vh;display:flex;align-items:center;
+  background:var(--dark);color:#fff;overflow:hidden;padding:140px 0 80px;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 60% 50% at 78% 40%,rgba(200,151,63,.20),transparent 70%),
+    radial-gradient(ellipse 50% 60% at 15% 80%,rgba(200,151,63,.10),transparent 70%);
+}
+.hero-grid{
+  position:absolute;inset:0;opacity:.16;
+  background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);
+  background-size:80px 80px;
+  mask-image:radial-gradient(ellipse 70% 70% at 50% 40%,#000,transparent);
+  -webkit-mask-image:radial-gradient(ellipse 70% 70% at 50% 40%,#000,transparent);
+}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;width:100%}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:7px 16px 7px 10px;border:1px solid rgba(200,151,63,.4);
+  border-radius:100px;font-size:12px;letter-spacing:.2em;color:var(--brand-light);
+  margin-bottom:30px;background:rgba(200,151,63,.06);
+}
+.hero-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 4px rgba(200,151,63,.2);animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(200,151,63,.2)}50%{box-shadow:0 0 0 9px rgba(200,151,63,0)}}
+h1.hero-title{
+  font-family:var(--serif);font-weight:700;
+  font-size:clamp(46px,6.6vw,92px);line-height:1.02;
+  letter-spacing:.01em;margin-bottom:28px;
+}
+h1.hero-title .line2{
+  display:block;color:transparent;
+  -webkit-text-stroke:1.5px rgba(232,200,135,.85);
+  letter-spacing:.04em;
+}
+.hero-sub{
+  font-size:17px;color:rgba(255,255,255,.68);max-width:520px;
+  line-height:1.9;margin-bottom:40px;font-weight:300;
+}
+.hero-sub strong{color:var(--brand-light);font-weight:500}
+.hero-actions{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;padding:15px 34px;
+  font-size:14px;letter-spacing:.06em;border-radius:100px;cursor:pointer;
+  transition:all .4s ease;border:1px solid transparent;font-weight:500;
+}
+.btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-deep));color:#fff;box-shadow:0 12px 34px rgba(154,111,36,.4)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(154,111,36,.5)}
+.btn-ghost{border-color:rgba(255,255,255,.28);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.5)}
+.btn .arr{transition:transform .35s}
+.btn:hover .arr{transform:translateX(4px)}
+
+.hero-visual{position:relative;aspect-ratio:4/5}
+.film-frame{
+  position:absolute;inset:0;border-radius:6px;overflow:hidden;
+  background:linear-gradient(150deg,#2a241b,#171410);
+  border:1px solid rgba(200,151,63,.22);
+  box-shadow:var(--shadow-lg);
+}
+.frame-scene{position:absolute;inset:0;overflow:hidden}
+.scene-glow{
+  position:absolute;width:70%;height:70%;border-radius:50%;
+  background:radial-gradient(circle,rgba(200,151,63,.5),transparent 65%);
+  filter:blur(20px);top:8%;left:22%;animation:floaty 8s ease-in-out infinite;
+}
+@keyframes floaty{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-14px,18px) scale(1.08)}}
+.scene-bars{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:20px;padding:0 12%}
+.scene-bar{
+  height:2px;background:linear-gradient(90deg,transparent,var(--brand),rgba(232,200,135,.2),transparent);
+  border-radius:2px;animation:scan 5s ease-in-out infinite;
+}
+.scene-bar:nth-child(2){animation-delay:.6s;opacity:.7}
+.scene-bar:nth-child(3){animation-delay:1.2s;opacity:.5}
+.scene-bar:nth-child(4){animation-delay:1.8s;opacity:.35}
+@keyframes scan{0%,100%{transform:scaleX(.5);opacity:.3}50%{transform:scaleX(1);opacity:1}}
+.scene-grid{position:absolute;inset:0;opacity:.2;background-image:linear-gradient(rgba(255,255,255,.1) 1px,transparent 1px);background-size:100% 26px}
+.scene-num{
+  position:absolute;bottom:26px;left:26px;font-family:var(--serif);
+  font-size:60px;color:rgba(232,200,135,.3);line-height:1;font-weight:700;
+}
+.scene-cap{
+  position:absolute;top:26px;right:26px;font-size:10px;letter-spacing:.34em;
+  color:rgba(232,200,135,.65);writing-mode:vertical-rl;text-orientation:mixed;
+}
+.floating-card{
+  position:absolute;background:rgba(250,247,241,.97);color:var(--ink);
+  padding:16px 20px;border-radius:4px;box-shadow:var(--shadow);
+  font-size:13px;backdrop-filter:blur(10px);
+}
+.fc-1{left:-36px;bottom:60px;animation:floatc 6s ease-in-out infinite}
+.fc-2{right:-30px;top:44px;animation:floatc 7s ease-in-out infinite .8s}
+@keyframes floatc{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.fc-1 .fc-k{font-size:10px;letter-spacing:.2em;color:var(--brand-deep);font-weight:600}
+.fc-1 .fc-v{font-family:var(--serif);font-size:24px;font-weight:700;margin-top:2px}
+.fc-2{display:flex;align-items:center;gap:10px}
+.fc-2 .rec{width:9px;height:9px;border-radius:50%;background:#d1495b;animation:pulse2 1.6s infinite}
+@keyframes pulse2{0%,100%{opacity:1}50%{opacity:.3}}
+.fc-2 .fc-t{font-size:12px;letter-spacing:.05em;color:var(--ink-soft)}
+
+/* ===== marquee ===== */
+.marquee{
+  background:var(--dark-2);color:rgba(255,255,255,.5);
+  padding:18px 0;overflow:hidden;white-space:nowrap;
+  border-top:1px solid rgba(200,151,63,.15);border-bottom:1px solid rgba(200,151,63,.15);
+}
+.marquee-track{display:inline-flex;gap:52px;animation:scrollx 32s linear infinite;will-change:transform}
+.marquee-track span{display:inline-flex;align-items:center;gap:52px;font-size:13px;letter-spacing:.24em;text-transform:uppercase}
+.marquee-track .sep{color:var(--brand);font-size:9px}
+@keyframes scrollx{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ===== intro / about ===== */
+.about{padding:130px 0;position:relative;background:var(--paper)}
+.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about-copy .lead{margin-top:26px}
+.about-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:44px}
+.stat{background:var(--paper);padding:26px 24px}
+.stat .num{font-family:var(--serif);font-size:42px;font-weight:700;line-height:1;color:var(--brand-deep)}
+.stat .num .unit{font-size:16px;margin-left:2px;color:var(--ink-soft);font-family:var(--sans);font-weight:500}
+.stat .lbl{font-size:12px;letter-spacing:.14em;color:var(--muted);margin-top:10px}
+.about-visual{position:relative;aspect-ratio:1/1.06}
+.av-main{
+  position:absolute;inset:0 18% 0 0;border-radius:4px;overflow:hidden;
+  background:linear-gradient(160deg,#292117,#161310);
+  border:1px solid rgba(200,151,63,.2);box-shadow:var(--shadow);
+}
+.av-main .grad{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 30% 25%,rgba(200,151,63,.5),transparent 55%),
+    radial-gradient(circle at 75% 80%,rgba(154,111,36,.4),transparent 60%);
+  animation:floaty 9s ease-in-out infinite;
+}
+.av-main .ring{
+  position:absolute;width:60%;aspect-ratio:1;border:1px solid rgba(232,200,135,.35);
+  border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);
+}
+.av-main .ring::after{
+  content:"";position:absolute;inset:16%;border:1px solid rgba(232,200,135,.2);border-radius:50%;
+  animation:spin 24s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.av-main .play{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:74px;height:74px;border-radius:50%;border:1px solid rgba(232,200,135,.6);
+  display:flex;align-items:center;justify-content:center;background:rgba(200,151,63,.14);
+}
+.av-main .play::after{content:"";border-style:solid;border-width:10px 0 10px 16px;border-color:transparent transparent transparent var(--brand-light);margin-left:4px}
+.av-sub{
+  position:absolute;right:0;bottom:8%;width:46%;aspect-ratio:1/1.15;
+  border-radius:4px;overflow:hidden;box-shadow:var(--shadow-lg);
+  background:linear-gradient(150deg,#3d2f1d,#1d1811);border:1px solid rgba(200,151,63,.3);
+}
+.av-sub .bars{position:absolute;inset:0;display:flex;align-items:flex-end;gap:6px;padding:22px}
+.av-sub .bars i{flex:1;background:linear-gradient(180deg,var(--brand-light),var(--brand-deep));border-radius:2px 2px 0 0;opacity:.85;animation:eq 3s ease-in-out infinite}
+@keyframes eq{0%,100%{height:30%}50%{height:80%}}
+.av-badge{
+  position:absolute;left:-8px;top:12%;background:var(--brand);color:#fff;
+  padding:14px 18px;border-radius:3px;box-shadow:var(--shadow);
+}
+.av-badge .b1{font-family:var(--serif);font-size:15px;font-weight:700;line-height:1.3}
+.av-badge .b2{font-size:10px;letter-spacing:.16em;opacity:.85;margin-top:2px}
+
+/* ===== services ===== */
+.services{padding:130px 0;background:var(--paper-2);position:relative}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:60px;flex-wrap:wrap}
+.sec-head .lead{max-width:420px}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.svc-card{
+  background:var(--paper);padding:38px 32px;border-radius:4px;
+  border:1px solid var(--line);position:relative;overflow:hidden;
+  transition:all .45s cubic-bezier(.2,.7,.3,1);
+}
+.svc-card::before{
+  content:"";position:absolute;left:0;top:0;width:3px;height:0;
+  background:linear-gradient(180deg,var(--brand),var(--brand-deep));
+  transition:height .45s ease;
+}
+.svc-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+.svc-card:hover::before{height:100%}
+.svc-num{font-family:var(--serif);font-size:13px;letter-spacing:.2em;color:var(--brand-deep);font-weight:600;margin-bottom:26px}
+.svc-icon{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,rgba(200,151,63,.18),rgba(154,111,36,.06));display:flex;align-items:center;justify-content:center;margin-bottom:24px}
+.svc-icon svg{width:26px;height:26px;stroke:var(--brand-deep);fill:none;stroke-width:1.6}
+.svc-card h3{font-family:var(--serif);font-size:23px;font-weight:700;margin-bottom:14px;letter-spacing:.02em}
+.svc-card p{font-size:14.5px;color:var(--muted);line-height:1.85}
+.svc-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.svc-tags span{font-size:11px;letter-spacing:.06em;color:var(--brand-deep);border:1px solid rgba(154,111,36,.3);padding:4px 10px;border-radius:100px}
+
+/* ===== works ===== */
+.works{padding:130px 0;background:var(--paper)}
+.works-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:22px}
+.work{
+  border-radius:4px;overflow:hidden;position:relative;cursor:pointer;
+  background:var(--dark-2);border:1px solid rgba(200,151,63,.14);
+  transition:transform .5s cubic-bezier(.2,.7,.3,1),box-shadow .5s;
+}
+.work:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+.work .art{position:relative;overflow:hidden}
+.work .art::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.75));opacity:.9}
+.work .art .gradbox{width:100%;height:100%;transition:transform .8s cubic-bezier(.2,.7,.3,1)}
+.work:hover .art .gradbox{transform:scale(1.06)}
+.work .meta{position:absolute;left:26px;right:26px;bottom:24px;z-index:2;color:#fff}
+.work .cat{font-size:10px;letter-spacing:.28em;color:var(--brand-light);margin-bottom:8px}
+.work .title{font-family:var(--serif);font-size:22px;font-weight:700;letter-spacing:.02em}
+.work .view{font-size:12px;color:rgba(255,255,255,.6);margin-top:8px;letter-spacing:.08em;display:flex;align-items:center;gap:6px;opacity:0;transform:translateY(6px);transition:.4s}
+.work:hover .view{opacity:1;transform:translateY(0)}
+.w-l{grid-column:span 7;height:400px}
+.w-s{grid-column:span 5;height:400px}
+.w-m{grid-column:span 4;height:320px}
+.w-b{grid-column:span 8;height:320px}
+.g1{background:linear-gradient(140deg,#b8842f,#6d4a13 60%,#3a2708)}
+.g2{background:linear-gradient(140deg,#2e3a3f,#1a2226 55%,#0d1214)}
+.g3{background:linear-gradient(150deg,#c8973f,#8a5f1f 45%,#4a3110)}
+.g4{background:linear-gradient(140deg,#3b3230,#211a18 60%,#100c0b)}
+.g5{background:linear-gradient(150deg,#a77c34,#5c4320 55%,#2c1f0d)}
+.g6{background:linear-gradient(140deg,#334b4a,#1a2828 60%,#0a1010)}
+.art .filmbox{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.art .filmbox .pill{width:64px;height:64px;border-radius:50%;border:1px solid rgba(232,200,135,.5);display:flex;align-items:center;justify-content:center;background:rgba(200,151,63,.12);z-index:2}
+.art .filmbox .pill::after{content:"";border-style:solid;border-width:8px 0 8px 13px;border-color:transparent transparent transparent var(--brand-light);margin-left:3px}
+.art .stripes{position:absolute;inset:0;opacity:.18;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.14) 0 1px,transparent 1px 16px)}
+
+/* ===== process ===== */
+.process{padding:130px 0;background:var(--dark);color:#fff;position:relative;overflow:hidden}
+.process::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 80% 20%,rgba(200,151,63,.14),transparent 65%)}
+.process .eyebrow{color:var(--brand-light)}
+.process .section-title{color:#fff}
+.process .section-title .accent{color:var(--brand-light)}
+.process .lead{color:rgba(255,255,255,.55)}
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:70px;position:relative;z-index:2}
+.proc-item{padding:0 28px;position:relative}
+.proc-item:first-child{padding-left:0}
+.proc-item::before{content:"";position:absolute;left:0;top:9px;width:1px;height:100%;background:linear-gradient(180deg,rgba(200,151,63,.35),transparent)}
+.proc-item:first-child::before{display:none}
+.proc-idx{font-family:var(--serif);font-size:64px;font-weight:700;color:rgba(200,151,63,.24);line-height:1;margin-bottom:18px}
+.proc-item h3{font-family:var(--serif);font-size:21px;font-weight:700;margin-bottom:12px;letter-spacing:.02em}
+.proc-item p{font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.85}
+
+/* ===== testimonials ===== */
+.voices{padding:130px 0;background:var(--paper-2)}
+.voice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
+.voice{background:var(--paper);padding:36px 32px;border-radius:4px;border:1px solid var(--line);position:relative;transition:all .4s}
+.voice:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.voice .quote{font-family:var(--serif);font-size:50px;color:rgba(200,151,63,.3);line-height:.7;margin-bottom:18px}
+.voice p{font-size:15px;color:var(--ink-soft);line-height:1.9;min-height:86px}
+.voice .who{display:flex;align-items:center;gap:14px;margin-top:26px;padding-top:22px;border-top:1px solid var(--line)}
+.voice .av{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand-deep));display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--serif);font-weight:700;font-size:16px}
+.voice .nm{font-size:14px;font-weight:600}
+.voice .rl{font-size:11.5px;color:var(--muted);letter-spacing:.04em;margin-top:1px}
+.stars{display:flex;gap:3px;margin-bottom:14px}
+.stars i{width:13px;height:13px;background:var(--brand);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+
+/* ===== numbers band ===== */
+.band{background:var(--brand-deep);color:#fff;padding:64px 0}
+.band-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.band .n{font-family:var(--serif);font-size:clamp(34px,4vw,52px);font-weight:700;line-height:1}
+.band .n .u{font-size:18px;font-family:var(--sans);font-weight:500;margin-left:3px}
+.band .t{font-size:12.5px;letter-spacing:.16em;opacity:.8;margin-top:12px}
+
+/* ===== journal ===== */
+.journal{padding:130px 0;background:var(--paper)}
+.journal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:56px}
+.post{border-radius:4px;overflow:hidden;background:var(--paper);border:1px solid var(--line);transition:all .45s;cursor:pointer}
+.post:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.post .cover{height:200px;position:relative;overflow:hidden}
+.post .cover .cg{width:100%;height:100%;transition:transform .7s}
+.post:hover .cover .cg{transform:scale(1.05)}
+.post .cover .tag{position:absolute;top:16px;left:16px;font-size:10px;letter-spacing:.2em;background:rgba(250,247,241,.94);color:var(--brand-deep);padding:5px 12px;border-radius:100px;font-weight:600}
+.post .body{padding:26px 26px 30px}
+.post .date{font-size:11.5px;letter-spacing:.14em;color:var(--muted);margin-bottom:12px}
+.post h3{font-family:var(--serif);font-size:19px;font-weight:700;line-height:1.5;margin-bottom:12px;transition:color .3s}
+.post:hover h3{color:var(--brand-deep)}
+.post p{font-size:13.5px;color:var(--muted);line-height:1.85}
+.post .more{font-size:12px;letter-spacing:.1em;color:var(--brand-deep);font-weight:600;margin-top:18px;display:inline-flex;gap:6px;align-items:center}
+
+/* ===== cta ===== */
+.cta{padding:120px 0;background:var(--dark-2);color:#fff;position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 50% 70% at 50% 100%,rgba(200,151,63,.2),transparent 70%)}
+.cta-inner{position:relative;z-index:2;text-align:center;max-width:760px;margin:0 auto}
+.cta h2{font-family:var(--serif);font-size:clamp(34px,4.6vw,58px);font-weight:700;line-height:1.2;margin-bottom:24px;letter-spacing:.02em}
+.cta h2 .accent{color:var(--brand-light)}
+.cta p{color:rgba(255,255,255,.6);font-size:16px;max-width:520px;margin:0 auto 40px;line-height:1.9}
+.cta-form{display:flex;gap:12px;max-width:520px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.cta-form input{
+  flex:1;min-width:240px;padding:16px 22px;border-radius:100px;border:1px solid rgba(255,255,255,.2);
+  background:rgba(255,255,255,.06);color:#fff;font-size:14px;font-family:var(--sans);outline:none;transition:.3s;
+}
+.cta-form input::placeholder{color:rgba(255,255,255,.4)}
+.cta-form input:focus{border-color:var(--brand);background:rgba(200,151,63,.1)}
+.cta-note{font-size:12px;color:rgba(255,255,255,.35);margin-top:20px;letter-spacing:.05em}
+
+/* ===== footer ===== */
+footer{background:var(--dark);color:rgba(255,255,255,.6);padding:80px 0 36px;position:relative}
+.foot-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:50px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,.08)}
+.foot-brand .logo{color:#fff;margin-bottom:20px}
+.foot-brand .logo-text small{color:rgba(255,255,255,.4)}
+.foot-brand p{font-size:13.5px;line-height:1.9;max-width:300px;color:rgba(255,255,255,.45)}
+.socials{display:flex;gap:12px;margin-top:26px}
+.socials a{
+  width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.15);
+  display:flex;align-items:center;justify-content:center;transition:.35s;font-size:12px;
+}
+.socials a:hover{background:var(--brand);border-color:var(--brand);color:#fff;transform:translateY(-3px)}
+.foot-col h4{color:#fff;font-size:13px;letter-spacing:.16em;margin-bottom:22px;font-weight:600}
+.foot-col ul{display:flex;flex-direction:column;gap:13px}
+.foot-col a{font-size:13.5px;color:rgba(255,255,255,.5);transition:.3s}
+.foot-col a:hover{color:var(--brand-light);padding-left:4px}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:32px;font-size:12px;color:rgba(255,255,255,.35);flex-wrap:wrap}
+.foot-bottom .links{display:flex;gap:24px}
+.foot-bottom a:hover{color:var(--brand-light)}
+
+/* ===== reveal ===== */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.2,.7,.3,1),transform .9s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ===== responsive ===== */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;gap:60px}
+  .hero-visual{max-width:440px;margin:0 auto;width:100%}
+  .about-inner{grid-template-columns:1fr;gap:60px}
+  .about-visual{max-width:460px;margin:0 auto;width:100%}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .w-l,.w-s,.w-m,.w-b{grid-column:span 6;height:320px}
+  .proc-grid{grid-template-columns:repeat(2,1fr);gap:44px 0}
+  .proc-item:nth-child(3){padding-left:0}
+  .proc-item:nth-child(3)::before{display:none}
+  .voice-grid{grid-template-columns:1fr}
+  .journal-grid{grid-template-columns:repeat(2,1fr)}
+  .foot-top{grid-template-columns:1fr 1fr}
+  nav.links{display:none}
+  .burger{display:flex}
+}
+@media(max-width:640px){
+  .wrap{padding:0 22px}
+  .section-title{font-size:30px}
+  .hero{padding:120px 0 70px}
+  .hero-title{font-size:44px}
+  .fc-1{left:-14px;bottom:30px}
+  .fc-2{right:-10px;top:20px}
+  .about,.services,.works,.process,.voices,.journal{padding:80px 0}
+  .svc-grid{grid-template-columns:1fr}
+  .w-l,.w-s,.w-m,.w-b{grid-column:span 12;height:280px}
+  .proc-grid{grid-template-columns:1fr;gap:36px}
+  .proc-item{padding:0}
+  .proc-item::before{display:none}
+  .band-grid{grid-template-columns:repeat(2,1fr);gap:34px}
+  .journal-grid{grid-template-columns:1fr}
+  .foot-top{grid-template-columns:1fr;gap:40px}
+  .sec-head{flex-direction:column;align-items:flex-start;gap:20px}
+}
+.mobile-menu{
+  position:fixed;inset:0;background:rgba(18,16,13,.98);z-index:999;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:30px;
+  opacity:0;pointer-events:none;transition:opacity .4s;
+}
+.mobile-menu.open{opacity:1;pointer-events:auto}
+.mobile-menu a{color:#fff;font-family:var(--serif);font-size:26px;letter-spacing:.06em}
+.mobile-menu a:hover{color:var(--brand-light)}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<div class="grain"></div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="logo">
+      <span class="logo-mark">7</span>
+      <span class="logo-text">7v7.7成色<small>SEVEN COLOR FILM</small></span>
+    </a>
+    <nav class="links">
+      <a href="#about">关于我们</a>
+      <a href="#services">影像服务</a>
+      <a href="#works">作品集</a>
+      <a href="#process">制作流程</a>
+      <a href="#journal">影像志</a>
+    </nav>
+    <a href="#contact" class="nav-cta">预约拍摄</a>
+    <button class="burger" id="burger" aria-label="菜单"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">关于我们</a>
+  <a href="#services">影像服务</a>
+  <a href="#works">作品集</a>
+  <a href="#process">制作流程</a>
+  <a href="#journal">影像志</a>
+  <a href="#contact">预约拍摄</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+  <div class="hero-grid"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-content">
+      <span class="hero-badge"><span class="dot"></span>EST. 2016 · 影像成色实验室</span>
+      <h1 class="hero-title">7v7.7成色<span class="line2">让每一帧都有温度</span></h1>
+      <p class="hero-sub">
+        我们相信，好的画面不止于清晰，更在于<strong>成色</strong>。
+        7v7.7成色以镜头为笔、以光影为墨，为品牌与个体记录真实而动人的视觉叙事——
+        从策划、拍摄到调色，让每一个像素都恰到好处。
+      </p>
+      <div class="hero-actions">
+        <a href="#works" class="btn btn-primary">浏览作品 <span class="arr">→</span></a>
+        <a href="#contact" class="btn btn-ghost">开启合作</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="film-frame">
+        <div class="frame-scene">
+          <div class="scene-grid"></div>
+          <div class="scene-glow"></div>
+          <div class="scene-bars">
+            <div class="scene-bar"></div>
+            <div class="scene-bar"></div>
+            <div class="scene-bar"></div>
+            <div class="scene-bar"></div>
+          </div>
+          <div class="scene-num">7</div>
+          <div class="scene-cap">REC · 成色 07</div>
+        </div>
+      </div>
+      <div class="floating-card fc-1">
+        <div class="fc-k">成色指数</div>
+        <div class="fc-v">7.7</div>
+      </div>
+      <div class="floating-card fc-2">
+        <span class="rec"></span>
+        <span class="fc-t">正在录制 · 第 7 场</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MARQUEE ===== -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>品牌影像<span class="sep">◆</span>短片创作<span class="sep">◆</span>调色成色<span class="sep">◆</span>纪实纪录<span class="sep">◆</span>商业广告<span class="sep">◆</span>活动直播<span class="sep">◆</span>后期包装<span class="sep">◆</span>视觉顾问</span>
+    <span>品牌影像<span class="sep">◆</span>短片创作<span class="sep">◆</span>调色成色<span class="sep">◆</span>纪实纪录<span class="sep">◆</span>商业广告<span class="sep">◆</span>活动直播<span class="sep">◆</span>后期包装<span class="sep">◆</span>视觉顾问</span>
+  </div>
+</div>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+  <div class="wrap about-inner">
+    <div class="about-copy reveal">
+      <div class="eyebrow">关于 7v7.7</div>
+      <h2 class="section-title">以成色为名，<br>做有<span class="accent">质感</span>的影像</h2>
+      <p class="lead">
+        7v7.7成色成立于2016年，是一支由导演、摄影师、剪辑师与调色师组成的影像团队。
+        我们不追逐流量的喧嚣，而是潜心研究每一帧画面的成色、每一个故事的呼吸。
+        七年以来，我们为超过三百个品牌与创作者交付了可信赖的视觉作品。
+      </p>
+      <p class="lead" style="margin-top:18px">
+        从一支三十秒的品牌短片，到一场跨越四季的纪实纪录，7v7.7成色始终相信：
+        好的成色，是技术与审美的平衡，是理性与感性的和解。
+      </p>
+      <div class="about-stats">
+        <div class="stat"><div class="num">300<span class="unit">+</span></div><div class="lbl">合作品牌</div></div>
+        <div class="stat"><div class="num">1200<span class="unit">+</span></div><div class="lbl">交付成片</div></div>
+        <div class="stat"><div class="num">7.7<span class="unit">分</span></div><div class="lbl">客户平均满意度</div></div>
+        <div class="stat"><div class="num">9<span class="unit">年</span></div><div class="lbl">行业深耕经验</div></div>
+      </div>
+    </div>
+    <div class="about-visual reveal">
+      <div class="av-main">
+        <div class="grad"></div>
+        <div class="ring"></div>
+        <div class="play"></div>
+      </div>
+      <div class="av-badge">
+        <div class="b1">成色即态度</div>
+        <div class="b2">COLOR IS ATTITUDE</div>
+      </div>
+      <div class="av-sub">
+        <div class="bars">
+          <i style="animation-delay:0s"></i>
+          <i style="animation-delay:.3s"></i>
+          <i style="animation-delay:.6s"></i>
+          <i style="animation-delay:.9s"></i>
+          <i style="animation-delay:1.2s"></i>
+          <i style="animation-delay:1.5s"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="eyebrow">影像服务</div>
+        <h2 class="section-title">从一帧到一部，<br>我们提供<span class="accent">全链路</span>影像方案</h2>
+      </div>
+      <p class="lead">无论是品牌形象片、产品广告、人物纪录，还是活动直播与后期调色，7v7.7成色都能提供从创意到成片的完整支持。</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card reveal">
+        <div class="svc-num">SERVICE / 01</div>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3"/></svg>
+        </div>
+        <h3>品牌影像</h3>
+        <p>为企业量身打造形象宣传片、年度大片与品牌故事片，以成色与叙事塑造可信赖的品牌视觉资产。</p>
+        <div class="svc-tags"><span>形象片</span><span>品牌故事</span><span>年度大片</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-num">SERVICE / 02</div>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 3v18M5 8l7-5 7 5M5 16l7 5 7-5"/></svg>
+        </div>
+        <h3>商业广告</h3>
+        <p>产品广告、电商短视频与创意 TVC，从脚本到分镜再到成片交付，让产品在画面中闪光。</p>
+        <div class="svc-tags"><span>TVC</span><span>产品广告</span><span>电商短视频</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-num">SERVICE / 03</div>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        </div>
+        <h3>纪实纪录</h3>
+        <p>人物纪录、城市影像与自然纪录，用克制的镜头语言保存时间里真实而动人的成色。</p>
+        <div class="svc-tags"><span>人物纪录</span><span>城市影像</span><span>自然纪录</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-num">SERVICE / 04</div>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 18l6-8 4 5 3-3 3 6z"/><circle cx="7" cy="7" r="2"/></svg>
+        </div>
+        <h3>调色成色</h3>
+        <p>7v7.7的核心专长。基于画面对比度、色温与情绪曲线，为影片定制专属的成色风格与 LUT。</p>
+        <div class="svc-tags"><span>电影调色</span><span>LUT 定制</span><span>色彩管理</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-num">SERVICE / 05</div>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg>
+        </div>
+        <h3>活动直播</h3>
+        <p>发布会、音乐会、论坛与婚礼的多机位直播与导播，稳定输出高质量的实时画面。</p>
+        <div class="svc-tags"><span>多机位</span><span>现场导播</span><span>实时包装</span></div>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-num">SERVICE / 06</div>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6 6 .9-4.5 4.3 1.1 6.1L12 16.8 6.4 19.3l1.1-6.1L3 8.9 9 8z"/></svg>
+        </div>
+        <h3>后期包装</h3>
+        <p>动态图形、视觉特效与字幕包装，为影像注入恰到好处的设计感与传播力。</p>
+        <div class="svc-tags"><span>MG 动画</span><span>视效合成</span><span>字幕包装</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WORKS ===== -->
+<section class="works" id="works">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="eyebrow">精选作品</div>
+        <h2 class="section-title">被看见的<span class="accent">成色</span></h2>
+      </div>
+      <p class="lead">精选近两年作品，涵盖品牌、纪实与商业。点击任意作品观看完整成片与幕后调色笔记。</p>
+    </div>
+    <div class="works-grid">
+      <div class="work w-l reveal">
+        <div class="art" style="height:100%">
+          <div class="gradbox g1"></div>
+          <div class="stripes"></div>
+          <div class="filmbox"><div class="pill"></div></div>
+        </div>
+        <div class="meta">
+          <div class="cat">BRAND FILM · 品牌影像</div>
+          <div class="title">《光的成色》· 年度品牌大片</div>
+          <div class="view">观看成片 →</div>
+        </div>
+      </div>
+      <div class="work w-s reveal">
+        <div class="art" style="height:100%">
+          <div class="gradbox g2"></div>
+          <div class="stripes"></div>
+        </div>
+        <div class="meta">
+          <div class="cat">DOCUMENTARY · 纪实纪录</div>
+          <div class="title">《山那边》· 人物纪录短片</div>
+          <div class="view">观看成片 →</div>
+        </div>
+      </div>
+      <div class="work w-m reveal">
+        <div class="art" style="height:100%">
+          <div class="gradbox g3"></div>
+          <div class="stripes"></div>
+        </div>
+        <div class="meta">
+          <div class="cat">COMMERCIAL · 商业广告</div>
+          <div class="title">《一滴之间》产品广告</div>
+          <div class="view">观看成片 →</div>
+        </div>
+      </div>
+      <div class="work w-m reveal">
+        <div class="art" style="height:100%">
+          <div class="gradbox g4"></div>
+          <div class="stripes"></div>
+        </div>
+        <div class="meta">
+          <div class="cat">CITY · 城市影像</div>
+          <div class="title">《夜行成色》城市夜拍</div>
+          <div class="view">观看成片 →</div>
+        </div>
+      </div>
+      <div class="work w-m reveal">
+        <div class="art" style="height:100%">
+          <div class="gradbox g5"></div>
+          <div class="stripes"></div>
+        </div>
+        <div class="meta">
+          <div class="cat">LIVE · 活动直播</div>
+          <div class="title">《七成色之夜》现场纪录</div>
+          <div class="view">观看成片 →</div>
+        </div>
+      </div>
+      <div class="work w-b reveal">
+        <div class="art" style="height:100%">
+          <div class="gradbox g6"></div>
+          <div class="stripes"></div>
+          <div class="filmbox"><div class="pill"></div></div>
+        </div>
+        <div class="meta">
+          <div class="cat">COLOR · 调色成色</div>
+          <div class="title">《色与温》· 电影级调色作品集</div>
+          <div class="view">观看成片 →</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">制作流程</div>
+      <h2 class="section-title">四步，让成色<span class="accent">恰到好处</span></h2>
+      <p class="lead" style="margin-top:22px">清晰、透明、可预期的制作流程，让每一次合作都从容不迫。</p>
+    </div>
+    <div class="proc-grid">
+      <div class="proc-item reveal">
+        <div class="proc-idx">01</div>
+        <h3>沟通与策划</h3>
+        <p>理解品牌与故事的核心诉求，确定影像调性、成色方向与预算，输出创意提案与分镜脚本。</p>
+      </div>
+      <div class="proc-item reveal">
+        <div class="proc-idx">02</div>
+        <h3>拍摄与执行</h3>
+        <p>专业摄制团队与设备进场，按分镜执行拍摄，现场同步监看画面成色，确保素材质量。</p>
+      </div>
+      <div class="proc-item reveal">
+        <div class="proc-idx">03</div>
+        <h3>剪辑与调色</h3>
+        <p>剪辑节奏与故事线打磨，进入 7v7.7 调色台，定制专属成色风格与情绪曲线，逐帧精修。</p>
+      </div>
+      <div class="proc-item reveal">
+        <div class="proc-idx">04</div>
+        <h3>交付与传播</h3>
+        <p>多种规格输出，提供全平台适配版本，附带成色笔记与使用建议，助力内容高效传播。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BAND ===== -->
+<div class="band">
+  <div class="wrap band-grid">
+    <div class="reveal"><div class="n">300<span class="u">+</span></div><div class="t">服务品牌</div></div>
+    <div class="reveal"><div class="n">1200<span class="u">+</span></div><div class="t">成片交付</div></div>
+    <div class="reveal"><div class="n">98<span class="u">%</span></div><div class="t">客户复购率</div></div>
+    <div class="reveal"><div class="n">7.7<span class="u">分</span></div><div class="t">成色满意度</div></div>
+  </div>
+</div>
+
+<!-- ===== VOICES ===== -->
+<section class="voices">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="eyebrow">客户之声</div>
+        <h2 class="section-title">他们这样评价<span class="accent">7v7.7</span></h2>
+      </div>
+    </div>
+    <div class="voice-grid">
+      <div class="voice reveal">
+        <div class="stars"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="quote">“</div>
+        <p>从提案到成片，7v7.7成色团队把我们的品牌调性拿捏得非常准确。最终的成色让人惊艳，客户反馈也是我们合作过最满意的一次。</p>
+        <div class="who">
+          <div class="av">林</div>
+          <div><div class="nm">林女士</div><div class="rl">某消费品牌市场总监</div></div>
+        </div>
+      </div>
+      <div class="voice reveal">
+        <div class="stars"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="quote">“</div>
+        <p>纪录片素材量很大，但团队在调色阶段展现出的成色把控力让人放心。他们真的懂‘成色’这两个字的分量，推荐给每一个认真做内容的人。</p>
+        <div class="who">
+          <div class="av">陈</div>
+          <div><div class="nm">陈先生</div><div class="rl">独立纪录片导演</div></div>
+        </div>
+      </div>
+      <div class="voice reveal">
+        <div class="stars"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="quote">“</div>
+        <p>活动直播多机位导播非常稳，现场实时画面成色统一，观众评价很高。合作流程透明，沟通高效，期待下一次合作。</p>
+        <div class="who">
+          <div class="av">周</div>
+          <div><div class="nm">周女士</div><div class="rl">品牌活动负责人</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== JOURNAL ===== -->
+<section class="journal" id="journal">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <div class="eyebrow">影像志</div>
+        <h2 class="section-title">幕后与<span class="accent">思考</span></h2>
+      </div>
+      <p class="lead">记录我们对成色、影像与叙事的持续思考，也分享拍摄幕后的琐碎与热爱。</p>
+    </div>
+    <div class="journal-grid">
+      <div class="post reveal">
+        <div class="cover"><div class="cg g3"></div><span class="tag">调色笔记</span></div>
+        <div class="body">
+          <div class="date">2024 · 11 · 07</div>
+          <h3>如何为品牌短片定制一套专属成色？</h3>
+          <p>从参考片拆解到 LUT 建立，我们拆解 7v7.7 成色工作流的六个关键节点，分享克制而精确的色彩设计方法。</p>
+          <span class="more">阅读全文 →</span>
+        </div>
+      </div>
+      <div class="post reveal">
+        <div class="cover"><div class="cg g2"></div><span class="tag">幕后记录</span></div>
+        <div class="body">
+          <div class="date">2024 · 10 · 22</div>
+          <h3>《山那边》拍摄手记：在海拔三千米等待光</h3>
+          <p>三天两夜，为了一个五分钟的镜头。我们记录下高原拍摄的真实处境，以及那些未能进入成片却依然动人的瞬间。</p>
+          <span class="more">阅读全文 →</span>
+        </div>
+      </div>
+      <div class="post reveal">
+        <div class="cover"><div class="cg g1"></div><span class="tag">观点</span></div>
+        <div class="body">
+          <div class="date">2024 · 09 · 15</div>
+          <h3>成色不是滤镜：论影像质感的技术与审美</h3>
+          <p>当“高级感”被滥用，我们重新讨论成色的本质。为什么说真正的成色来自拍摄现场、调色台与创作者判断力的共同作用。</p>
+          <span class="more">阅读全文 →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta" id="contact">
+  <div class="wrap cta-inner">
+    <h2>让下一个画面，<br>拥有<span class="accent">7v7.7</span>的成色</h2>
+    <p>告诉我们你的故事与想法，7v7.7成色团队将在 24 小时内与你联系，一起把画面做成作品。</p>
+    <div class="cta-form">
+      <input type="email" placeholder="留下你的邮箱，我们主动联系你" id="ctaEmail">
+      <button class="btn btn-primary" id="ctaBtn">提交需求 <span class="arr">→</span></button>
+    </div>
+    <div class="cta-note">我们尊重每一份信任，不群发、不打扰。</div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="logo" style="color:#fff">
+          <span class="logo-mark">7</span>
+          <span class="logo-text" style="color:#fff">7v7.7成色<small style="color:rgba(255,255,255,.4)">SEVEN COLOR FILM</small></span>
+        </div>
+        <p>以成色为名的影像品牌，专注品牌影像、商业广告、纪实纪录与调色成色，用镜头记录真实而动人的视觉叙事。</p>
+        <div class="socials">
+          <a href="#" aria-label="微博">微</a>
+          <a href="#" aria-label="B站">B</a>
+          <a href="#" aria-label="小红书">红</a>
+          <a href="#" aria-label="抖音">抖</a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>影像服务</h4>
+        <ul>
+          <li><a href="#services">品牌影像</a></li>
+          <li><a href="#services">商业广告</a></li>
+          <li><a href="#services">纪实纪录</a></li>
+          <li><a href="#services">调色成色</a></li>
+          <li><a href="#services">活动直播</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>关于我们</h4>
+        <ul>
+          <li><a href="#about">团队介绍</a></li>
+          <li><a href="#works">精选作品</a></li>
+          <li><a href="#process">制作流程</a></li>
+          <li><a href="#journal">影像志</a></li>
+          <li><a href="#contact">合作咨询</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>联系方式</h4>
+        <ul>
+          <li><a href="#">hello@7v7color.com</a></li>
+          <li><a href="#">+86 138 0000 7777</a></li>
+          <li><a href="#">周一至周五 · 10:00–19:00</a></li>
+          <li><a href="#">城市影像实验室 · 创意园 7 号</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2024 7v7.7成色 · 保留所有权利</span>
+      <div class="links">
+        <a href="#">隐私政策</a>
+        <a href="#">服务条款</a>
+        <a href="#">网站地图</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // nav scroll state
+  var nav = document.getElementById('nav');
+  function onScroll(){
+    if(window.scrollY > 40){ nav.classList.add('scrolled'); }
+    else { nav.classList.remove('scrolled'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // mobile menu
+  var burger = document.getElementById('burger');
+  var mm = document.getElementById('mobileMenu');
+  burger.addEventListener('click', function(){ mm.classList.toggle('open'); });
+  mm.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ mm.classList.remove('open'); });
+  });
+
+  // reveal on scroll
+  var reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -60px 0px'});
+    reveals.forEach(function(el){ io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  // cta form
+  var btn = document.getElementById('ctaBtn');
+  var em = document.getElementById('ctaEmail');
+  btn.addEventListener('click', function(){
+    var v = (em.value || '').trim();
+    if(!v || v.indexOf('@') < 0){
+      em.style.borderColor = '#d1495b';
+      em.placeholder = '请输入有效的邮箱地址';
+      em.value = '';
+      setTimeout(function(){ em.style.borderColor = 'rgba(255,255,255,.2)'; }, 1600);
+      return;
+    }
+    btn.textContent = '已提交 ✓';
+    btn.style.background = 'linear-gradient(135deg,#6fae7a,#4a8a56)';
+    em.value = '';
+    em.placeholder = '感谢信任，我们会尽快联系你';
+    setTimeout(function(){
+      btn.innerHTML = '提交需求 <span class="arr">→</span>';
+      btn.style.background = '';
+    }, 3200);
+  });
+
+  // subtle parallax for hero visual
+  var hv = document.querySelector('.hero-visual');
+  if(hv && window.matchMedia('(min-width: 1025px)').matches){
+    window.addEventListener('mousemove', function(e){
+      var x = (e.clientX / window.innerWidth - 0.5) * 10;
+      var y = (e.clientY / window.innerHeight - 0.5) * 10;
+      hv.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+    }, {passive:true});
+  }
+
+  // work card hover tilt (light)
+  document.querySelectorAll('.work').forEach(function(w){
+    w.addEventListener('mouseenter', function(){ w.style.zIndex = 3; });
+    w.addEventListener('mouseleave', function(){ w.style.zIndex = ''; });
+  });
+
+  // animated number count for stat & band
+  function animateCount(el){
+    var target = parseFloat(el.getAttribute('data-target'));
+    var dec = parseInt(el.getAttribute('data-dec') || '0', 10);
+    if(isNaN(target)) return;
+    var start = null, dur = 1400;
+    function step(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      var val = target * eased;
+      el.textContent = dec ? val.toFixed(dec) : Math.round(val);
+      if(p < 1) requestAnimationFrame(step);
+      else el.textContent = dec ? target.toFixed(dec) : Math.round(target);
+    }
+    requestAnimationFrame(step);
+  }
+  var counters = document.querySelectorAll('.stat .num, .band .n');
+  if('IntersectionObserver' in window){
+    var co = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ /* handled below for explicit markup */ co.unobserve(e.target); }
+      });
+    }, {threshold:0.4});
+    counters.forEach(function(c){ co.observe(c); });
+  }
+})();
+</script>
+</body>
+</html>
